@@ -32,11 +32,19 @@ gulp.task "clean", ->
 
 # CSS Styles
 gulp.task "styles", ->
+    opt =
+        optimizers:
+            minifier:false
     gulp.src("src/assets/css/scss/screen.scss")
     .pipe compass(
         config_file: "src/assets/config.rb"
     )
     .pipe(autoprefixer("last 2 version", "safari 5", "ie 8", "ie 9", "opera 12.1", "ios 6", "android 4"))
+    .pipe(gulp.dest("public/assets/css"))
+    .pipe(please(opt)).pipe(rename(
+        suffix: ".rec"
+        extname: ".css"
+    ))
     .pipe(gulp.dest("public/assets/css"))
     .pipe(rename(suffix: ".min"))
     .pipe(minifyCss())

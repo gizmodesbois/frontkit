@@ -2,10 +2,6 @@ body {
   background: #fefefe;
   color: #212121;
   font: normal 87.5%/1.6 "Helvetica"; }
-
-@media screen and (min-width: 36em) {
-  body {
-    background: #ccc; } }
 #container {
   width: 960px;
   margin: 0 auto; }
@@ -19,5 +15,8 @@ body {
   padding: 0; }
 
 @media screen and (min-width: 36em) {
+  body {
+    background: #ccc; }
+
   #container {
     background: purple; } }
