@@ -12,6 +12,12 @@ npm install
 
 ##Tasks available
 
+###Styles CSS
+
+###Scripts JS
+
+###Images
+
 ##More
 
 More tasks are coming to this kit. If you want more, open an issue.
